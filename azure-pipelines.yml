@@ -10,15 +10,15 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'AzureRmPipeline-conn.'
-    subscriptionId: '8a573e04-1273-46e1-93d0-35e118d0164f'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'AzureRmPipeline-rg'
-    location: 'West Europe'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/zeljkobajsanski/AzureRmPipeline/main/azuredeploy.json'
-    overrideParameters: '-projectName AzureRm'
-    deploymentMode: 'Incremental'
+  - task: AzureResourceManagerTemplateDeployment@3
+    inputs:
+      deploymentScope: 'Resource Group'
+      azureResourceManagerConnection: 'AzureRmPipeline-conn.'
+      subscriptionId: '8a573e04-1273-46e1-93d0-35e118d0164f'
+      action: 'Create Or Update Resource Group'
+      resourceGroupName: 'AzureRmPipeline-rg'
+      location: 'West Europe'
+      templateLocation: 'URL of the file'
+      csmFileLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-sql-database/azuredeploy.json'
+      csmParametersFileLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-sql-database/azuredeploy.parameters.json'
+      deploymentMode: 'Incremental'
