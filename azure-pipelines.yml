@@ -22,4 +22,4 @@ steps:
       csmFileLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-sql-database/azuredeploy.json'
       csmParametersFileLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-sql-database/azuredeploy.parameters.json'
       deploymentMode: 'Incremental'
-      overrideParameters: '-serverName testsrv -administratorLogin zeksdev -administratorLoginPassword Enlight123'
+      overrideParameters: '-serverName testsrv001 -administratorLogin zeksdev -administratorLoginPassword Enlight123'
